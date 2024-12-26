@@ -7,7 +7,6 @@ RUN apt-get update && \
     apt-get clean
 
 # Copy application code into the container
-# Assuming the code is in the same directory as the Dockerfile
 COPY . /var/www/html/
 
 # Expose the default Apache port
@@ -15,3 +14,4 @@ EXPOSE 80
 
 # Start Apache in the foreground
 CMD ["apachectl", "-D", "FOREGROUND"]
+
